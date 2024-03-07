@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function AddNotes({handleAddNote=()=>{}}){
-    const [note,setNote] = useState("");
+    const [note, setNote] = useState("");
 
     function HandleAddNoteTextareChange(e){
         console.log("e.target.value",e.target.value);
@@ -9,8 +9,9 @@ export default function AddNotes({handleAddNote=()=>{}}){
         setNote(e.target.value);
     }
     const HandleAddNoteChildFunctionInButton = ()=>{
-        setNote("");
+        console.log("note from handle", note);
         handleAddNote(note);
+        setNote("");
     };
 
 
